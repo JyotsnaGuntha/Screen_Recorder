@@ -1,0 +1,106 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* frontend/src/App.css */
+body {
+  /* A modern, subtle background pattern */
+  background-color: #020617; /* slate-950 */
+  background-image: radial-gradient(circle at 1px 1px, #334155 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: rgba(30, 41, 59, 0.7); /* slate-800 with transparency */
+  border: 1px solid #334155; /* slate-700 */
+  backdrop-filter: blur(12px);
+  padding: 1.5rem; /* 24px */
+  border-radius: 0.75rem; /* 12px */
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16px */
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 0.75rem; /* 12px */
+  right: 0.75rem; /* 12px */
+  background: none;
+  border: none;
+  color: #94a3b8; /* slate-400 */
+  font-size: 1.5rem; /* 24px */
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.modal-close-button:hover {
+  color: #f8fafc; /* slate-50 */
+  transform: rotate(90deg);
+}
+
+/* A simple fade-in animation for new elements */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
